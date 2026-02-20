@@ -1,0 +1,5 @@
+import type { Request, Response } from 'express';
+export declare const sendMessage: (req: Request, res: Response) => Promise<void>;
+export declare const getMessages: (req: Request, res: Response) => Promise<void>;
+export declare const getConversations: (req: Request, res: Response) => Promise<void>;
+//# sourceMappingURL=messageController.d.ts.map
