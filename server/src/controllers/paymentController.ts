@@ -6,7 +6,7 @@ import Gig from '../models/Gig.js';
 
 dotenv.config();
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || 'sk_test_51Px9X7P9yP9yP9yP9yP9yP9yP9yP9yP9yP9yP9yP9yP9yP9yP9yP9yP9yP9yP9yP9y');
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || '');
 
 export const createPaymentIntent = async (req: Request, res: Response) => {
     try {
