@@ -37,7 +37,7 @@ io.on('connection', (socket) => {
     });
 });
 const PORT = process.env.PORT || 3000;
-const MONGO_URI = process.env.MONGO_URI || '';
+const MONGO_URI = process.env.MONGO_URI || 'mongodb+srv://jaiswalkshitij361_db_user:rbz2RI4agEjqtBIj@cluster1.htawzbk.mongodb.net/freelanced';
 mongoose
     .connect(MONGO_URI)
     .then(() => {
