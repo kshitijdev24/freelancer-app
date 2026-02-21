@@ -32,7 +32,7 @@ const CreateGigPage = () => {
         setError('');
 
         try {
-            const response = await fetch('http://localhost:3000/api/gigs', {
+            const response = await fetch('https://freelancer-app-jvlw.onrender.com/api/gigs', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

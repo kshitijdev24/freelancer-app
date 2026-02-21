@@ -36,7 +36,7 @@ const ChatPage = () => {
         const fetchConversations = async () => {
             if (!user) return;
             try {
-                const response = await fetch('http://localhost:3000/api/messages/conversations', {
+                const response = await fetch('https://freelancer-app-jvlw.onrender.com/api/messages/conversations', {
                     headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
                 });
                 const data = await response.json();
@@ -68,7 +68,7 @@ const ChatPage = () => {
         const fetchMessages = async () => {
             if (!user || !activeChat) return;
             try {
-                const response = await fetch(`http://localhost:3000/api/messages/${activeChat.user._id}`, {
+                const response = await fetch(`https://freelancer-app-jvlw.onrender.com/api/messages/${activeChat.user._id}`, {
                     headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
                 });
                 const data = await response.json();
@@ -91,7 +91,7 @@ const ChatPage = () => {
         setMsg('');
 
         try {
-            const response = await fetch('http://localhost:3000/api/messages', {
+            const response = await fetch('https://freelancer-app-jvlw.onrender.com/api/messages', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

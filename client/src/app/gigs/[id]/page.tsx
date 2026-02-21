@@ -23,7 +23,7 @@ const GigDetailsPage = () => {
     useEffect(() => {
         const fetchGig = async () => {
             try {
-                const response = await fetch(`http://localhost:3000/api/gigs/${id}`);
+                const response = await fetch(`https://freelancer-app-jvlw.onrender.com/api/gigs/${id}`);
                 const data = await response.json();
                 setGig(data);
             } catch (error) {
@@ -42,7 +42,7 @@ const GigDetailsPage = () => {
         }
 
         try {
-            const response = await fetch('http://localhost:3000/api/payments/create-intent', {
+            const response = await fetch('https://freelancer-app-jvlw.onrender.com/api/payments/create-intent', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -69,7 +69,7 @@ const GigDetailsPage = () => {
 
         setIsEstablishingLink(true);
         try {
-            const response = await fetch('http://localhost:3000/api/messages', {
+            const response = await fetch('https://freelancer-app-jvlw.onrender.com/api/messages', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

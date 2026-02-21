@@ -16,7 +16,7 @@ const JobDetailsPage = () => {
     useEffect(() => {
         const fetchJob = async () => {
             try {
-                const response = await fetch(`http://localhost:3000/api/jobs/${id}`);
+                const response = await fetch(`https://freelancer-app-jvlw.onrender.com/api/jobs/${id}`);
                 const data = await response.json();
                 setJob(data);
             } catch (error) {
@@ -36,7 +36,7 @@ const JobDetailsPage = () => {
 
         setIsEstablishingLink(true);
         try {
-            const response = await fetch('http://localhost:3000/api/messages', {
+            const response = await fetch('https://freelancer-app-jvlw.onrender.com/api/messages', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

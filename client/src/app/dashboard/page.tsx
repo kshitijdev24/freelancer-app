@@ -32,14 +32,14 @@ const DashboardPage = () => {
             if (!user) return;
             try {
                 if (user.role === 'freelancer') {
-                    const response = await fetch(`http://localhost:3000/api/gigs?owner=${user._id}`);
+                    const response = await fetch(`https://freelancer-app-jvlw.onrender.com/api/gigs?owner=${user._id}`);
                     const gigs = await response.json();
                     setData({ gigs: Array.isArray(gigs) ? gigs.filter((g: any) => (g.owner?._id || g.owner) === user._id) : [] });
                 } else {
-                    const response = await fetch('http://localhost:3000/api/jobs/my-jobs', {
+                    const response = await fetch('https://freelancer-app-jvlw.onrender.com/api/jobs/my-jobs', {
                         headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
                     });
-                    const jobs = await response.json();
+                    const jobs = await response.json()
                     setData({ jobs: Array.isArray(jobs) ? jobs : [] });
                 }
             } catch (error) {

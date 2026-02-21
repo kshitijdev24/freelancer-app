@@ -40,7 +40,7 @@ const StripeCheckout: React.FC<StripeCheckoutProps> = ({ clientSecret, gigId, on
             setIsLoading(false);
         } else if (paymentIntent && paymentIntent.status === "succeeded") {
             // Confirm on backend
-            const response = await fetch('http://localhost:3000/api/payments/confirm', {
+            const response = await fetch('https://freelancer-app-jvlw.onrender.com/api/payments/confirm', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

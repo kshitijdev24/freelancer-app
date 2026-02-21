@@ -17,7 +17,7 @@ const GigsPage = () => {
             if (search) queryParams.append('search', search);
             if (category) queryParams.append('category', category);
 
-            const response = await fetch(`http://localhost:3000/api/gigs?${queryParams.toString()}`);
+            const response = await fetch(`https://freelancer-app-jvlw.onrender.com/api/gigs?${queryParams.toString()}`);
             const data = await response.json();
             setGigs(Array.isArray(data) ? data : []);
         } catch (error) {
