@@ -48,7 +48,7 @@ const JobCard: React.FC<JobCardProps> = ({ job }) => {
             <div className="flex items-center justify-between pt-8 border-t border-border">
                 <div className="flex items-center gap-4">
                     <div className="w-10 h-10 bg-foreground/5 rounded-xl flex items-center justify-center text-foreground/20 font-black text-sm">
-                        {job.client.username[0].toUpperCase()}
+                        {job.client?.username?.[0]?.toUpperCase()|| "U"}
                     </div>
                     <div>
                         <p className="text-[10px] font-black text-foreground uppercase tracking-widest">{job.client.username}</p>
